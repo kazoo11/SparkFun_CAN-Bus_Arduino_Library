@@ -162,6 +162,7 @@ uint8_t mcp2515_init(uint8_t speed)
 	spi_putc((1<<BTLMODE)|(1<<PHSEG11));
 	spi_putc((1<<BRP1)|(1<<BRP0));
 */	
+	// 8 Tq / bit
 	spi_putc((1<<PHSEG21));		// Bitrate 250 kbps at 16 MHz
 	spi_putc((1<<BTLMODE)|(1<<PHSEG11));
 	//spi_putc(1<<BRP0);
